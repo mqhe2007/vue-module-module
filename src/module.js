@@ -1,12 +1,17 @@
-import Logo from './components/Logo.vue'
-import routes from './router/routes'
-import storeModule from './store/store-module'
-export default function(Vue) {
-  Vue.config.productionTip = false
-  this.$router.addRoutes(routes)
-  this.$store.registerModule('main', storeModule)
-  this.$eventBus.on('visitedAbout', () => {
-    alert('用户访问了about页面。')
-  })
-  this.$dynamicComponent.create(Logo)
-}
+import { name } from "../package.json";
+import router from "./router";
+import App from "./App.vue";
+export default {
+  name,
+  install(
+    /**
+     * @type {import('vue-module-loader/src/interfaces').Context}
+     */
+    context
+  ) {
+    const app = context.Vue.createApp(App);
+    app.use(router);
+    app.mount("#app");
+    context.app = app;
+  },
+};
