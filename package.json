@@ -1,5 +1,5 @@
 {
-  "name": "vue-module",
+  "name": "vue-module-frame",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -14,7 +14,6 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.2.3",
     "@vue/compiler-sfc": "^3.1.1",
-    "@vue/devtools": "^5.3.4",
     "cross-env": "^7.0.3",
     "vite": "^2.3.7"
   }

@@ -1,4 +1,5 @@
 import vue from "@vitejs/plugin-vue";
+import { name } from "./package.json";
 import { resolve } from "path";
 export default ({ command }) => {
   /**
@@ -7,8 +8,8 @@ export default ({ command }) => {
   const config = {
     resolve: {
       alias: {
-        '@': resolve(__dirname, './src')
-      }
+        "@": resolve(__dirname, "./src"),
+      },
     },
     plugins: [vue()],
   };
@@ -17,12 +18,13 @@ export default ({ command }) => {
       sourcemap: true,
       lib: {
         entry: resolve(__dirname, "src/module.js"),
+        // 格式必须为iife
         formats: ["iife"],
-        name: "viteModule",
+        name: name,
       },
       minify: false,
       rollupOptions: {
-        // 确保外部化处理那些你不想打包进库的依赖
+        // 为了使用同一vue对象，所有模块必须外置化vue
         external: ["vue"],
       },
     };
