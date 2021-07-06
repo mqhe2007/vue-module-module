@@ -1,5 +1,5 @@
 <template>
   <div class="home">
-    <p>这里是主框架模板工程页面</p>
+    <p>这里是模块工程页面</p>
   </div>
 </template>

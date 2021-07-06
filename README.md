@@ -1,6 +1,6 @@
-# vue-module-frame
+# vue-module-module
 
-主框架模板
+模块模板
 
 适用于[vue-module-loader](https://github.com/mqhe2007/vue-module-loader)的微前端工程模板。
 

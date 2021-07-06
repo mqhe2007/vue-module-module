@@ -1,6 +1,11 @@
 import vue from "@vitejs/plugin-vue";
 import { name } from "./package.json";
 import { resolve } from "path";
+function camelize(str) {
+  return (str + "").replace(/-\D/g, function (match) {
+    return match.charAt(1).toUpperCase();
+  });
+}
 export default ({ command }) => {
   /**
    * @type {import('vite').UserConfig}
@@ -20,7 +25,7 @@ export default ({ command }) => {
         entry: resolve(__dirname, "src/module.js"),
         // 格式必须为iife
         formats: ["iife"],
-        name: name,
+        name: camelize(name),
       },
       minify: false,
       rollupOptions: {
