@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
     "buildmodule": "cross-env BUILD_MODULE=1 vite build"
   },
   "dependencies": {
     "vue": "^3.1.1",
+    "vue-module-loader": "^3.0.0-rc.5",
     "vue-router": "^4.0.8"
   },
   "devDependencies": {
