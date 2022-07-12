@@ -4,17 +4,17 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "buildmodule": "cross-env BUILD_MODULE=1 vite build"
+    "build:module": "cross-env BUILD_MODULE=1 vite build"
   },
   "dependencies": {
-    "vue": "^3.1.1",
-    "vue-module-loader": "^3.0.0-rc.5",
-    "vue-router": "^4.0.8"
+    "vue": "^3.2.37",
+    "vue-module-loader": "3.1.0-bate.2",
+    "vue-router": "^4.1.2"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.2.3",
-    "@vue/compiler-sfc": "^3.1.1",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "@vue/compiler-sfc": "^3.2.37",
     "cross-env": "^7.0.3",
-    "vite": "^2.3.7"
+    "vite": "3.0.0-beta.10"
   }
 }
