@@ -7,14 +7,14 @@
     "build:module": "cross-env BUILD_MODULE=1 vite build"
   },
   "dependencies": {
-    "vue": "^3.2.40",
+    "vue": "^3.3.4",
     "vue-module-loader": "^3.4.1",
-    "vue-router": "^4.1.5"
+    "vue-router": "^4.2.2"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^3.1.2",
-    "@vue/compiler-sfc": "^3.2.40",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/compiler-sfc": "^3.3.4",
     "cross-env": "^7.0.3",
-    "vite": "^3.1.8"
+    "vite": "^4.3.9"
   }
 }
