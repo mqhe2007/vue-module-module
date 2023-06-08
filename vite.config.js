@@ -18,7 +18,10 @@ export default ({ command }) => {
     },
     plugins: [vue()],
   };
-  if (command === "build" && process.env.BUILD_MODULE === "1") {
+  if (
+    command === "build" &&
+    process.env.npm_lifecycle_event === "build:module"
+  ) {
     config.define = {
       "process.env.NODE_ENV": '"production"',
     };
@@ -35,6 +38,12 @@ export default ({ command }) => {
       rollupOptions: {
         // 为了使用同一vue对象，所有模块必须外置化vue
         external: ["vue"],
+        output: {
+          // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
+          globals: {
+            vue: "Vue",
+          },
+        },
       },
     };
   }

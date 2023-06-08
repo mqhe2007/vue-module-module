@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build:module": "cross-env BUILD_MODULE=1 vite build"
+    "build:module": "vite build"
   },
   "dependencies": {
     "vue": "^3.3.4",
