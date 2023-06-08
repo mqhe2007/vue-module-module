@@ -1,6 +1,9 @@
 import { name } from "../package.json";
 import routes from "./routes";
-// 导出模块定义对象
+/**
+ * 模块运行入口文件
+ * 导出模块名和安装方法（模块定义）
+ */
 export default {
   name,
   install(
@@ -9,7 +12,7 @@ export default {
      */
     context
   ) {
-    routes.forEach(item => {
+    routes.forEach((item) => {
       context.app.config.globalProperties.$router.addRoute(item);
     });
   },
