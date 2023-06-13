@@ -1,0 +1,16 @@
+{
+  "name": "name",
+  "title": "标题",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:module": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {},
+  "devDependencies": {}
+}

@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build:module": "vite build"
+    "build:module": "vite build",
+    "prepare": "husky install"
   },
   "dependencies": {
     "vue": "^3.3.4",
@@ -16,5 +17,8 @@
     "@vue/compiler-sfc": "^3.3.4",
     "cross-env": "^7.0.3",
     "vite": "^4.3.9"
+  },
+  "lint-staged": {
+    "!(/public)**/*.{js,ts,vue}": "eslint --fix"
   }
 }
